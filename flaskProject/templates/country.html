@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>레코드 상세 페이지</title>
+    <style>
+        h1 { text-align:center }
+        /* 버튼 디자인 */
+        .btn { color:white; background-color:black;
+               padding:5px; border-radius:5px; text-decoration:none }
+    </style>
+</head>
+<body>
+<h1>{{ temp_dic.Name }} 페이지</h1>
+<hr>
+<!--table>(tr>(th+td))*5-->
+<table border="1" cellpadding="10" cellspacing="0" align="center">
+    <tr>
+        <th>No</th>
+        <td>{{ temp_dic.No }}</td>
+    </tr>
+    <tr>
+        <th>Code</th>
+        <td>{{ temp_dic.Code }}</td>
+    </tr>
+    <tr>
+        <th>GNP</th>
+        <td>{{ temp_dic.GNP }}</td>
+    </tr>
+    <tr>
+        <th>Population</th>
+        <td>{{ temp_dic.Population }}</td>
+    </tr>
+    <tr>
+        <td colspan="2"><a href="/" class="btn">첫번째 페이지로 이동</a></td>
+    </tr>
+</table>
+</body>
+</html>

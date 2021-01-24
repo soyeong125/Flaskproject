@@ -1,0 +1,24 @@
+<!-- postTest.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>POST Form</title>
+</head>
+<body>
+<h1>POST Form Test</h1>
+<form action="/resultPost" method="post">
+<!--
+label => 텍스트 필드의 제목설정
+input:text => 입력상자
+-->
+<!--    (p>label{data$}+input:text)*3-->
+    <p><label for="data1">data1</label><input type="text" name="data1" id="data1"></p>
+    <p><label for="data2">data2</label><input type="text" name="data2" id="data2"></p>
+    <p><label for="data3">data3</label><input type="text" name="data3" id="data3"></p>
+    <p><button>전송</button></p>
+</form>
+
+
+</body>
+</html>

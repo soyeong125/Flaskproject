@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>전체 테이블 출력</title>
+    <style>
+        h1,p { text-align:center }
+        /* 버튼 디자인 */
+        .btn { color:white; background-color:black;
+               padding:5px; border-radius:5px; text-decoration:none }
+    </style>
+</head>
+<body>
+<h1>전체 테이블 : {{totalCount}}</h1>
+<hr>
+<p><a href="/country_add" class="btn">레코드 추가</a></p>
+<hr>
+<table border="1" cellpadding="10" cellspacing="0" align="center">
+    <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Detail</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+<!--    for item in 리스트명  -->
+    {% for temp_dic in country_list %}
+    <tr>  <!--  딕셔너리.키  -->
+        <td>{{ temp_dic.No }}</td>
+        <td>{{ temp_dic.Name }}</td>
+<!--        각각의 상세 레코드 페이지로 이동 : 쿼리 스트링 이용 -->
+        <td><a href="/country/{{ temp_dic.No }}" class="btn">Detail Page</a></td>
+<!--        레코드 삭제 실행 : 쿼리 스트링 이용  -->
+        <td><a href="/country_delete_pro/{{ temp_dic.No }}" class="btn">Delete</a></td>
+<!--        레코드 수정 페이지로 이동 : 쿼리 스트링 이용  -->
+        <td><a href="/country_update/{{ temp_dic.No }}" class="btn">Update Page</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

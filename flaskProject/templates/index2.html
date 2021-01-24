@@ -1,0 +1,92 @@
+<!-- templates/index2.html-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Page2</title>
+</head>
+<body>
+<h1>Start Page2</h1>
+<hr>
+<p><a href="/ifTest">ifTest 페이지로 이동</a></p>
+<hr>
+<h2>쿼리스트링 테스트</h2>
+<!--ul>li>a-->
+<!--# /user/<userName>-->
+<ul>
+    <li><a href="/user/Sam/25">userName1</a></li>
+    <li><a href="/user/Maria/45">userName2</a></li>
+    <li><a href="/user/Jhon/12">userName3</a></li>
+</ul>
+
+
+<hr>
+<h2>변수 출력</h2>
+<!--ul>li*2-->
+<ul>
+    <li>x = {{x}}</li>
+    <li>y = {{y}}</li>
+</ul>
+<hr>
+<h2>리스트 출력</h2>
+<p>cityList <br>
+    {{cityList}}</p>
+<p>첫번째 값은? {{cityList[0]}} </p>
+<hr>
+<h2>딕셔너리 출력</h2>
+<p>cityList <br>
+    {{wordDict}}</p>
+<p>{{wordDict['s']}} </p>
+<hr>
+<h2>1~10까지 출력</h2>
+<ul>
+{% for i in range(1, 11) %}
+  <li>{{i}}</li>
+{% endfor %}
+</ul>
+<hr>
+<h2>리스트 출력 - for문 이용</h2>
+<ul>
+{% for item in cityList %}
+    <li>{{ item }}</li>
+{% endfor %}
+</ul>
+<hr>
+<h2>딕셔너리 출력 - for문 이용</h2>
+<ul>
+{% for key in wordDict %}
+    <li>{{key}} => {{wordDict[key]}}</li>
+{% endfor %}
+</ul>
+<hr>
+<h2> 이중 for문 이용</h2>
+{% for i in range(1, 4) %}
+    <h3>{{i}}</h3>
+    {% for j in range(1, 6) %}
+        <p>{{j}}</p>
+    {% endfor %}
+    <hr>
+{% endfor %}
+<hr>
+<h2> 퀴즈 - 구구단 전체 출력</h2>
+<!--
+    2단
+    2 X 1 = 2
+    ...
+    9단
+    9 X 1 = 9
+-->
+{% for i in range(2, 10) %}
+    <h3> {{i}} 단</h3>
+    <ul>
+    {% for j in range(1, 10) %}
+        <li>{{i}} X {{j}} = {{i*j}}</li>
+    {% endfor %}
+    </ul>
+    <hr>
+{% endfor %}
+
+<!-- # 5:00 ~ 5:10 사이 QR 8교시 체크 -->
+
+</body>
+</html>

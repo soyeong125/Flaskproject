@@ -1,0 +1,139 @@
+
+# 프로그램 셋팅 
+1) Python 설치 
+https://www.python.org/downloads/windows/
+Download Windows x86-64 executable installer (64비트기준) 
+python-3.8.6-amd64.exe 파일을 더블 클릭하여 관리자 모드로 실행하시고 
+Add Python 3.8 to PATH 꼭 체크하시길 
+[INSTALL NOW] 클릭해서 설치
+
+2) Pycharm 
+파이참 설치 다운로드 : https://www.jetbrains.com/ko-kr/pycharm/download/#section=windows
+Community 버전으로 다운로드 
+다운로드 후 pycharm-community-2020.3.exe 파일을 마우스 우측 버튼 
+관리자 권한으로 실행 
+
+3) 작업 폴더 생성 
+c:/flaskProject 
+
+
+4)  Pycharm에서 프로젝트 설정 
+   Pycharm 실행 
+   처음실행시에는 동의 체크박스 선택 
+   프로젝트 설정화면에서  [+] New Project 클릭 
+   [Create Project] 대화상자에서 [Location] 에서 작업폴더 지정 
+   
+
+# 파이썬 파일 생성하기 
+[File]-[New]
+
+
+# 프로젝트 변경은?
+[File]-[Settings] 
+[Project ~] 아래의 [Python Interpreter] 클릭 
+[Show All] 클릭후에 [+]
+[Conda Environment] 로 지정 
+
+
+
+
+# 안녕하세요 3일차 수업전에
+# QR 입실 체크 및 1교시 체크
+# 총 2번 진행 부탁드립니다.
+
+# MYSQL 설치
+
+# 템플릿 상속을 이용한 웹사이트 제작
+1. 레이아웃 틀 => 템플릿
+   templates/layout.html
+2. 각각의 시작과 서브 페이지
+   templates/index3.html
+   templates/sub1.html
+   templates/sub2.html
+3. 파이썬 서버단 파일 생성
+   day3_1.py
+
+# mysql데이타베이타의 특정 테이블 데이타 조회
+1. db 접속
+2. cursor 생성
+3. sql 변수 => sql 명령문
+4. cursor의 execute 함수를 이용해서 sql 명령 실행
+5. sql 명령 실행 => 결과 데이타 저장
+6. 결과 데이타(2차원 튜플) => 딕셔너리 리스트 구조 변경
+
+
+# 4교시 출석체크 QR 1:00~1:10 분 사이
+
+
+
+
+# 레코드 추가
+1) db에 레코드를 추가하는 함수 정의
+country_add
+2) 라우터 주소 country_add
+3) 레코드 페이지  country_add.html
+   post 방식
+4) 3번의 페이지로 이동하는 하이퍼링크 추가
+   index4
+5) 레코드 추가 폼처리 라우터 생성
+   country_add_pro
+6) 레코드 추가 확인 페이지
+
+# 레코드 삭제
+1) db.py에 레코드를 삭제하는 함수 정의
+country_delete(no)
+2) 각 레코드를 삭제하는 하이퍼링크 생성
+/country_delete_pro/레코드번호
+index4.html
+3) 레코드 삭제 라우터 생성
+country_delete_pro/<no>
+day3_2.py
+
+
+# 레코드 수정
+1) db.py에 레코드를 수정하는 함수 정의
+country_update(no)
+2) 각 레코드를 수정하는 하이퍼링크 생성
+/country_update/레코드번호
+index4.html
+3) 각각의 수정페이지로 이동하는 라우터
+/country_update/<no>
+
+4) 각각의 레코드 수정 페이지 생성
+country_update.html
+
+5)레코드 수정 라우터 생성
+country_update_pro
+day3_2.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

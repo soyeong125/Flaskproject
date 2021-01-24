@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>레코드 추가 페이지</title>
+    <style>
+        h1, p { text-align:center }
+        label { padding-right:10px }
+        /* 버튼 디자인 */
+        .btn { color:white; background-color:black;
+               padding:5px; border-radius:5px; text-decoration:none }
+    </style>
+</head>
+<body>
+<h1>레코드 추가</h1>
+<hr>
+<form action="/country_add_pro" method="post">
+<!--    (p>(label+input:text))*4-->
+    <p>
+        <label for="code">Code</label><input type="text" name="code" id="code" required>
+    </p>
+    <p>
+        <label for="name">Name</label><input type="text" name="name" id="name" required>
+    </p>
+    <p>
+        <label for="gnp">GNP</label><input type="text" name="gnp" id="gnp" required>
+    </p>
+    <p>
+        <label for="population">Population</label>
+        <input type="text" name="population" id="population" required>
+    </p>
+    <p><input type="submit" value="전송">
+        <input type="reset" value="취소"></p>
+</form>
+
+
+</body>
+</html>

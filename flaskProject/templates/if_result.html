@@ -1,0 +1,30 @@
+<!-- if_result.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>if result</title>
+</head>
+<body>
+<h1>if Test</h1>
+<hr>
+<h2>userAge 변수값에 따라 메세지를 출력하기</h2>
+{% if userAge >= 20 %}
+    <p>나이 = {{userAge}} : 성인 </p>
+{% else %}
+    <p>나이 = {{userAge}} : 미성년자 </p>
+{% endif %}
+<hr>
+<h2>myNum 값에 따라 메세지 출력하기</h2>
+<p>myNum = {{myNum}}</p>
+{% if myNum>0 %}
+  <p>양수이다.</p>
+{% elif myNum==0 %}
+   <p>0이다. </p>
+{% else %}
+   <p>음수이다.</p>
+{% endif %}
+
+
+</body>
+</html>

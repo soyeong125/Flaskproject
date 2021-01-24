@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>레코드 수정</title>
+    <style>
+        h1, p { text-align:center }
+        label { padding-right:10px }
+        /* 버튼 디자인 */
+        .btn { color:white; background-color:black;
+               padding:5px; border-radius:5px; text-decoration:none }
+    </style>
+
+</head>
+<body>
+<!--{{ temp_dic }}-->
+
+
+<h1>레코드 수정</h1>
+<hr>
+
+<form action="/country_update_pro" method="post">
+<!--    (p>(label+input:text))*4-->
+<!--    hidden 필드로 temp_dic.no 지정  input:hidden -->
+    <input type="hidden" name="no" value={{ temp_dic.No }}>
+    <p>
+        <label>Code</label> : {{ temp_dic.Code }}
+    </p>
+    <p>
+        <label>Name</label> : {{ temp_dic.Name }}
+    </p>
+    <p>
+        <label for="gnp">GNP</label>
+        <input type="text" name="gnp" id="gnp" required value={{ temp_dic.GNP}}>
+    </p>
+    <p>
+        <label for="population">Population</label>
+        <input type="text" name="population" id="population" required
+        value={{ temp_dic.Population }} >
+    </p>
+    <p><input type="submit" value="전송">
+        <input type="reset" value="취소"></p>
+</form>
+
+
+</body>
+</html>
